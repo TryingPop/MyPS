@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="단계별로_풀어보기\32\32_14.cs~RF2984afb9.TMP" />
+    <None Remove="단계별로_풀어보기\33\33_03.cs~RF39680a95.TMP" />
+  </ItemGroup>
+
+</Project>

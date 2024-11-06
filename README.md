@@ -1,2 +1,6 @@
 # MyPS
-problem solving : Baekjoon, Programmers
+사용 언어 : C#, C++
+
+## Baekjoon
+  - 10k 단위로 폴더 1차 구분, 1k 단위로 폴더 2차 구분
+  - 사용 언어 : C#
