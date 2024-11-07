@@ -77,5 +77,10 @@ White Oak 10.3448<br/>
 Willow 3.4483<br/>
 Yellow Birch 3.4483<br/>
 
+## 풀이
+나무 이름과 개수를 확인해야 하므로 딕셔너리 자료구조로 나무 종과 갯수를 저장했다.<br/>
+그리고 정렬은 foreach로 읽어올 때 정렬해서 읽어 왔다. 정렬을 고려한다면 SortedDictionary도 좋다.<br/>
+소수점 4째자리의 정밀도를 요구하기에 double 형으로 % 연산을 했다.<br/>
+
 ## 문제 링크
 https://www.acmicpc.net/problem/4358
