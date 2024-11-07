@@ -30,7 +30,8 @@ Forty-two is the answer to the universe.<br/>
 Split 메소드를 이용해 What is 를 기준으로 분할했다.<br/>
 그러면 1번부터 What is ~~~ 의 ~~~가 담긴다.<br/>
 이후 ?가 나올때까지 길이를 잰 뒤 Substring 메소드로 부분 문자열을 구해 출력해 풀었다.<br/>
-문장은 .이나 ?로 끝난다고 했으므로 .이 나오면 질문이 아니므로 끊었다.<br/>
+문장은 .이나 ?로 끝난다고 했으므로 .으로 끝나는 문장은 질문이 아니므로 끊었다.<br/>
+
 
 ## 문제 링크
 https://www.acmicpc.net/problem/7656
