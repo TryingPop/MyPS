@@ -41,7 +41,7 @@ makeup face<br/>
 3<br/>
 
 ## 힌트
-#### 첫 번째 테스트 케이스는 headgear에 해당하는 의상이 hat, turban이며 eyewear에 해당하는 의상이 sunglasses이므로   (hat), (turban), (sunglasses), (hat,sunglasses), (turban,sunglasses)로 총 5가지 이다.
+첫 번째 테스트 케이스는 headgear에 해당하는 의상이 hat, turban이며 eyewear에 해당하는 의상이 sunglasses이므로   (hat), (turban), (sunglasses), (hat,sunglasses), (turban,sunglasses)로 총 5가지 이다.<br/>
 
 ## 풀이
 옷을 입는 전체 경우의 수는 각 부위별로 적어도 1개씩 입어야 한다.<br/>
