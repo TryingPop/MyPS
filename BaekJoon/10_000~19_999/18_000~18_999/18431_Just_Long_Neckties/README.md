@@ -83,4 +83,4 @@ ai를 i번째로 짧은 넥타이를 입은 넥타이 길이라하고, bi를 i�
 
 
 ## 문제 링크
-https://www.acmicpc.net/problem/18110
+https://www.acmicpc.net/problem/18431
