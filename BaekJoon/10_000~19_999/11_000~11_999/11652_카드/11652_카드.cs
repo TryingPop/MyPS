@@ -265,9 +265,9 @@ namespace BaekJoon.etc
             }
         }
 
-        static void Main(string[] args)
+        static void Main1103(string[] args)
         {
-
+            
 #if first
             int n;
             Dictionary<long, int> dic;

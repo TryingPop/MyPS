@@ -21,7 +21,7 @@ namespace BaekJoon.etc
     internal class etc_1106
     {
 
-        static void Main(string[] args)
+        static void Main1106(string[] args)
         {
 
             int INF = 10_000;
