@@ -15,8 +15,6 @@ using System.Threading.Tasks;
             3인 경우 1번 인덱스를 2번 탐색하고
             0, 2번은 2가 된다
         2. 그냥 연산자 잘못 설정한 경우로 >=가 아닌  >를 사용해 틀렸다
-        
-    
 */
 
 namespace BaekJoon.etc
