@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BaekJoon.etc
 {
-    internal class etc_1127
+    internal class etc_1128
     {
     }
 }
