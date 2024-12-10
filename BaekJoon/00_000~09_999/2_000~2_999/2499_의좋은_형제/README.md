@@ -1,0 +1,84 @@
+# C#
+
+## 난이도 : 실버 2
+
+## 알고리즘 분류
+  - 다이나믹 프로그래밍
+  - 누적 합
+  - 배낭 문제
+
+## 제한조건
+  - 시간 제한 : 1초
+  - 메모리 제한 : 256 MB
+
+## 문제
+어떤 N × N 개의 단위 구역으로 구성된 논이 있다. 각 단위 구역에서는 쌀이 생산되는데 구역에 따라서 쌀의 생산량이 다르다. 아래는 5 × 5 = 25개의 단위 구역으로 나누어진 논을 보여주고 있다. 각 구역에 적혀 있는 숫자는 예상되는 쌀의 수확량(가마)이다.<br/>
+
+|3|4|5|1|8|
+|:---:|:---:|:---:|:---:|:---:|
+|8|2|3|2|2|
+|0|2|9|5|4|
+|1|11|3|0|5|
+|4|5|2|7|1|
+
+두 의좋은 형제는 이 N × N의 논을 다음과 같이 두 부분으로 나누어 형은 아래쪽에 있는 땅을 가지고, 동생은 위쪽의 땅을 가지기로 하였다. 전체 구역을 마구잡이로 나누면 기계로 농사를 짓는데 불편하기 때문에 각 형제에게 배분된 구역이 단조 증가하는 계단 모양이 되게 하려고 한다. 즉, 주어진 논을 N × N 행렬로 볼 때 형이 특정 열에서 할당받는 구역의 개수는 바로 왼쪽 열에서 받은 구역의 개수보다 크거나 같아야 한다. 예를 들어 다음 세 그림 중 그림 1과 2는 올바른 배정 방법으로, 회색 지역은 형의 논, 나머지 부분은 동생의 논이다. 그러나 그림 3은 논을 나누는 규칙을 어기는 경우이다.<br/>
+두 형제는 논을 공평하게 나누기 위해, 위와 같은 방법들 중 각 영역의 예상 수확량의 차이가 되도록 적게 하고자 한다. 예를 들어 그림 1은 형의 예상 수확량이 48, 동생이 49로 최적인 경우이나, 그림 2는 형은 39, 동생은 58로 공평하게 나눠지지 않은 경우이다. 주어진 논을 최대한 공평하게 나누는 방법을 구하는 프로그램을 작성하라. <br/>
+
+|3|4|5|1|<span style="color:red">8</span>|
+|:---:|:---:|:---:|:---:|:---:|
+|8|2|3|2|<span style="color:red">2</span>|
+|0|2|9|<span style="color:red">5</span>|<span style="color:red">4</span>|
+|<span style="color:red">1</span>|<span style="color:red">11</span>|<span style="color:red">3</span>|<span style="color:red">0</span>|<span style="color:red">5</span>|
+|<span style="color:red">4</span>|<span style="color:red">5</span>|<span style="color:red">2</span>|<span style="color:red">7</span>|<span style="color:red">1</span>|
+
+<그림 1>
+
+|3|4|5|1|8|
+|:---:|:---:|:---:|:---:|:---:|
+|8|2|3|2|2|
+|0|2|9|<span style="color:red">5</span>|<span style="color:red">4</span>|
+|<span style="color:red">1</span>|<span style="color:red">11</span>|<span style="color:red">3</span>|<span style="color:red">0</span>|<span style="color:red">5</span>|
+|<span style="color:red">4</span>|<span style="color:red">5</span>|<span style="color:red">2</span>|<span style="color:red">7</span>|<span style="color:red">1</span>|
+
+<그림 2>
+
+|3|4|5|1|8|
+|:---:|:---:|:---:|:---:|:---:|
+|<span style="color:red">8</span>|2|3|2|2|
+|<span style="color:red">0</span>|2|9|<span style="color:red">5</span>|<span style="color:red">4</span>|
+|<span style="color:red">1</span>|<span style="color:red">11</span>|<span style="color:red">3</span>|<span style="color:red">0</span>|<span style="color:red">5</span>|
+|<span style="color:red">4</span>|<span style="color:red">5</span>|<span style="color:red">2</span>|<span style="color:red">7</span>|<span style="color:red">1</span>|
+
+<그림 3>
+
+
+## 입력
+첫째 줄에 논의 크기를 나타내는 정수 N (2 ≤ N ≤ 20)이 주어진다. 둘째 줄부터 N+1번째 줄에는 각 단위 구역의 예상 수확량이 0에서 100 사이의 정수로 주어진다. 둘째 줄에는 논의 제 1행의 각 구역의 예상 수확량에 해당하는 N개의 정수가 빈칸을 사이에 두고 주어지며, 셋째 줄에는 제 2행의 각 구역의 예상 수확량에 해당하는 N개의 정수가 빈 칸을 사이에 두고 주어진다. 넷째 줄부터 N+1번째 줄도 같은 형식으로 각 줄마다 N개 정수들이 주어진다.<br/>
+
+
+## 출력
+첫째 줄에는 최적의 방법으로 영역을 나누었을 때의 예상 수확량 차이를 나타내는 정수를 출력하고, 둘째 줄에는 이 최적의 방법에서 논의 첫 번째 열부터 N번째 열까지 형이 배분받는 구역의 수를 나타내는 N개의 정수를 빈칸을 사이에 두고 출력한다. 방법이 여러 개인 경우 하나만 출력한다.<br/>
+
+
+## 예제 입력
+5<br/>
+3 4 5 1 8<br/>
+8 2 3 2 2<br/>
+0 2 9 5 4<br/>
+1 11 3 0 5<br/>
+4 5 2 7 1<br/>
+
+
+## 예제 출력
+1<br/>
+2 2 2 3 3<br/>
+
+
+## 풀이
+dp[r][c][x] = val를 표에서 행이 r, 열이 c인 부분을 택하고 동생의 합이 x인 경우 형과 동생의 최소 차이를 val가 되게 한다.<br/>
+그러면 열부터 하나씩 선택해가면 dp[r][c][x]의 값은 dp[r'][c + 1][x + sum[r'][c + 1]] (0 ≤ r' ≤ r) 중 최솟값이 된다.<br/>
+만약 c가 n이면 total - x - x의 절댓값이 형과 동생의 값을 반환하면 된다.<br/>
+
+
+## 문제 링크
+https://www.acmicpc.net/problem/2499
