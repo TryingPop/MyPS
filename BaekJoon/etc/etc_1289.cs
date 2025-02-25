@@ -1,26 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
 /*
-날짜 : 2024. 10. 4
+날짜 : 2025. 1. 22
 이름 : 배성훈
-내용 : 여우 국수
-    문제번호 : 23047번
+내용 : 배
+    문제번호 : 
 */
 
 namespace BaekJoon.etc
 {
-    internal class etc_1000
+    internal class etc_1289
     {
 
-        static void Main1000(string[] args)
+        static void Main1289(string[] args)
         {
 
-            int n;
-            bool[] arr1, arr2;
+            int n, m;
+            int[] robot, box;
 
             Solve();
             void Solve()
@@ -28,7 +29,7 @@ namespace BaekJoon.etc
 
                 Input();
 
-
+                GetRet();
             }
 
             void GetRet()
@@ -40,31 +41,32 @@ namespace BaekJoon.etc
             void Input()
             {
 
-                StreamReader sr = new(Console.OpenStandardInput(), bufferSize: 65536);
+                using StreamReader sr = new(Console.OpenStandardInput(), bufferSize: 65536);
                 n = ReadInt();
+                robot = new int[n];
+                Array.Sort(robot, (x, y) => y.CompareTo(x));
 
-                arr1 = new bool[n];
                 for (int i = 0; i < n; i++)
                 {
 
-                    arr1[i] = sr.Read() == 'Y';
+                    robot[i] = ReadInt();
                 }
 
-                if (sr.Read() == '\r') sr.Read();
-
-                arr2 = new bool[n];
-                for (int i = 0; i < n; i++)
+                m = ReadInt();
+                box = new int[m];
+                for (int i = 0; i < m; i++)
                 {
 
-                    arr2[i] = sr.Read() == 'Y';
+                    box[i] = ReadInt();
                 }
 
-                sr.Close();
+                Array.Sort(box, (x, y) => y.CompareTo(x));
 
                 int ReadInt()
                 {
 
                     int c, ret = 0;
+
                     while ((c = sr.Read()) != -1 && c != ' ' && c != '\n')
                     {
 
@@ -75,8 +77,6 @@ namespace BaekJoon.etc
                     return ret;
                 }
             }
-
-
         }
     }
 }
