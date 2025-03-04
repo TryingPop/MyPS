@@ -43,6 +43,9 @@
 
 [14606번 피자 (Small)](https://www.acmicpc.net/problem/14606) 역시 같은 코드로 풀 수 있다.
 
+그리고 연산진행과정을 보면 절반으로 나누면서 진행하기에 2 x (5 x 10^8)^2의 값을 넘지 못한다.<br/>
+즉 long의 범위안에 정답이 나온다.<br/>
+
 
 ## 문제 링크
 https://www.acmicpc.net/problem/14607
