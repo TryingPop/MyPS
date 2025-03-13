@@ -21,9 +21,9 @@ Welcome을 아래 예제 출력처럼 출력한다.<br/>
 
 
 ## 예제 출력
-.  .   .<br/>
-|  | _ | _. _ ._ _  _<br/>
-|/\|(/.|(_.(_)[ | )(/.<br/>
+.&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;.<br/>
+|&nbsp;&nbsp;|&nbsp;_&nbsp;|&nbsp;_.&nbsp;_&nbsp;._&nbsp;_&nbsp;&nbsp;_<br/>
+|/\|(/.|(_.(_)[&nbsp;|&nbsp;)(/.<br/>
 
 ## 풀이
 예제대로 출력하면 된다.<br/>
