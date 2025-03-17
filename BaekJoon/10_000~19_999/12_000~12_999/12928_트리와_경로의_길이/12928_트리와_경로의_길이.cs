@@ -48,15 +48,6 @@ namespace BaekJoon.etc
             void GetRet()
             {
 
-                if (n == 2)
-                {
-
-                    if (s == 0) Console.Write(1);
-                    else Console.Write(0);
-
-                    return;
-                }
-
                 int ret = DFS(n - 2, 0);
                 if (ret == 1) Console.Write(1);
                 else Console.Write(0);
