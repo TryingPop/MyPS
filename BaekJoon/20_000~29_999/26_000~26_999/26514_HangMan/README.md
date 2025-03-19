@@ -30,31 +30,31 @@ The word and resulting hangman figure, according to the series of guesses provid
 
 
 ## 예제 입력
-4<br>
-APLUS 8 A S E U G P I J<br>
-UIL 9 A B C D E F G H J<br>
-SALTLICK 9 E F G H I J K M N<br>
-GOOGLE 4 G O L E<br>
+4<br/>
+APLUS 8 A S E U G P I J<br/>
+UIL 9 A B C D E F G H J<br/>
+SALTLICK 9 E F G H I J K M N<br/>
+GOOGLE 4 G O L E<br/>
 
 
 ## 예제 출력
-APLUS<br>
-&nbsp;&nbsp;O<br>
-+=|<br>
-<br>
-UIL<br>
-&nbsp;&nbsp;O<br>
+APLUS<br/>
+&nbsp;&nbsp;O<br/>
++=|<br/>
+<br/>
+UIL<br/>
+&nbsp;&nbsp;O<br/>
 +=|=+<br>
-&nbsp;&nbsp;|<br>
-&nbsp;/&nbsp;\<br>
+&nbsp;&nbsp;|<br/>
+&nbsp;/&nbsp;\\<br/>
 <br>
-SALTLICK<br>
-&nbsp;&nbsp;O<br>
-+=|=+<br>
-&nbsp;&nbsp;|<br>
+SALTLICK<br/>
+&nbsp;&nbsp;O<br/>
++=|=+<br/>
+&nbsp;&nbsp;|<br/>
 <br>
-GOOGLE<br>
-SAFE<br>
+GOOGLE<br/>
+SAFE<br/>
 
 
 ## 풀이
