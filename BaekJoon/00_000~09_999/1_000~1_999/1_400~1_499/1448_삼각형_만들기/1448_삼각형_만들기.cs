@@ -19,7 +19,7 @@ namespace BaekJoon.etc
     internal class etc_1446
     {
 
-        static void Main(string[] args)
+        static void Main1446(string[] args)
         {
 
             using StreamReader sr = new(Console.OpenStandardInput(), bufferSize: 65536);
