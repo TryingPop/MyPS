@@ -63,4 +63,4 @@ r2 - r1 + 1개의 줄에 소용돌이를 예쁘게 출력한다.<br/>
 그리고 예쁘게 출력하는건 보간을 이용해 출력했다.<br/>
 
 ## 문제 링크
-https://www.acmicpc.net/problem/1112
+https://www.acmicpc.net/problem/1022
