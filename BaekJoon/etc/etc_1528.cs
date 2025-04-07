@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace BaekJoon.etc
 {
-    internal class etc_1526
+    internal class etc_1528
     {
+
+        // 10165 - 버스 노선
     }
 }
