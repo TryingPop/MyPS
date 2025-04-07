@@ -24,7 +24,7 @@ namespace BaekJoon.etc
     internal class etc_1508
     {
 
-        static void Main(string[] args)
+        static void Main1508(string[] args)
         {
 
             long x, y;
