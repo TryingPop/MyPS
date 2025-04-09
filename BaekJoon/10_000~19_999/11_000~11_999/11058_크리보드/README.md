@@ -52,4 +52,4 @@ dp[0] = 0, dp[1] = 1, dp[2] = 2, dp[3] = 3, dp[4] = 4, dp[5] = 5임이 자명하
 
 
 ## 문제 링크
-https://www.acmicpc.net/problem/11055
+https://www.acmicpc.net/problem/11058
