@@ -69,7 +69,8 @@ AXB BCC DEE XBB YCC ZEE<br/>
 
 ## 풀이
 Linq의 Select함수를 이용해 입력과 동시에 접미사가 F의 길이의 문자열만 읽어온다.<br/>
-그리고 Dictinoary에 해당 접미사의 갯수를 확인했다.<br/>
+그리고 Dictinoary에 문자열을 키로, 같은 접미사의 갯수 벨류로 관리했다.<br/>
+여기서는 서로 다른 라임의 갯수만 세어주면 되기에 Dictionary가 아닌 HashSet으로 푸는게 더 좋아 보인다.<br/>
 
 
 ## 문제 링크
