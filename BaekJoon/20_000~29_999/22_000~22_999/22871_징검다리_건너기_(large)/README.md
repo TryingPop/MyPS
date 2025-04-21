@@ -54,5 +54,8 @@ k = i인 경우 도달하는게 가능하다고 가정하자.<br/>
 이제 k가 지나가는지 확인하는 방법은 [22869 징검다리 건너기 (small)](https://github.com/TryingPop/MyPS/tree/main/BaekJoon/20_000~29_999/22_000~22_999/22869_%EC%A7%95%EA%B2%80%EB%8B%A4%EB%A6%AC_%EA%B1%B4%EB%84%88%EA%B8%B0_(small))처럼 확인하면 된다.<br/>
 
 
+그러면 O(log (max(A_i)) x N^2)이고 이는 1억을 넘지 않아 충분히 시도할만한 방법이다.<br/>
+
+
 ## 문제 링크
 https://www.acmicpc.net/problem/22871
