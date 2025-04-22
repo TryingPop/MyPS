@@ -46,15 +46,11 @@
 	#include <vector>
 	#include <queue>
 	using namespace std;
-	
 	typedef pair<int, int> IntPair;
 	typedef vector<IntPair> VectorIntPair;
-	
 	#define INF 1000000000
-	
 	int i, j, V, n, w, counter, Q, s, t, d, u;
 	vector<VectorIntPair> AdjList;
-	
 	// scroll down to line 92 for the
 	// short C++ implementation (with STL priority_queue)
 	int main() {
@@ -65,15 +61,12 @@
 	    while (n--) {
 	      scanf("%d %d", &j, &w);
 	      AdjList[i].push_back(IntPair(j, w));
-	
 	    }
 	  }
-	
 	  counter = 0;
 	  scanf("%d", &Q);
 	  while (Q--) {
 	    scanf("%d %d", &s, &t);
-	
 	    vector<int> dist(V, INF);
 	    dist[s] = 0;
 	    priority_queue< IntPair, vector<IntPair>, greater<IntPair> > pq;
@@ -84,7 +77,6 @@
 	        printf("TLE because iteration counter > 1000000\n");
 	        return 1;
 	      }
-	
 	      IntPair front = pq.top(); pq.pop();
 	      d = front.first; u = front.second;
 	      if (d == dist[u]) {
@@ -97,24 +89,22 @@
 	        }
 	      }
 	    }
-	
 	    printf("%d\n", dist[t]);
 	  }
-	
 	  printf("The value of counter is: %d\n", counter);
 	  return 0;
 	}
 
 
+
   - FloydWarshall
+
 
 
 	#include <algorithm>
 	#include <cstdio>
 	using namespace std;
-	
 	int i, j, k, V, n, w, M[300][300], counter, Q, s, t;
-	
 	int main() {
 	  scanf("%d", &V);
 	  for (i = 0; i < V; i++)
@@ -122,7 +112,6 @@
 	      M[i][j] = M[j][i] = 1000000000;
 	  for (i = 0; i < V; i++)
 	    M[i][i] = 0;
-	
 	  for (i = 0; i < V; i++) {
 	    scanf("%d", &n);
 	    while (n--) {
@@ -130,7 +119,6 @@
 	      M[i][j] = min(M[i][j], w);
 	    }
 	  }
-	
 	  counter = 0;
 	  for (k = 0; k < V; k++)
 	    for (i = 0; i < V; i++)
@@ -142,13 +130,11 @@
 	        }
 	        M[i][j] = min(M[i][j], M[i][k] + M[k][j]);
 	      }
-	
 	  scanf("%d", &Q);
 	  while (Q--) {
 	    scanf("%d %d", &s, &t);
 	    printf("%d\n", M[s][t]);
 	  }
-	
 	  printf("The value of counter is: %d\n", counter);
 	  return 0;
 	}
