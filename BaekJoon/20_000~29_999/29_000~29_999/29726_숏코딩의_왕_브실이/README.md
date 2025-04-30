@@ -59,4 +59,4 @@ arr[n - 1 - i] - min[m - i]가 된다.<br/>
 
 
 ## 문제 링크
-https://www.acmicpc.net/problem/29723
+https://www.acmicpc.net/problem/29726
