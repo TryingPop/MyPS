@@ -17,33 +17,33 @@
 문제는 C, C++, JAVA 또는 Python3을 이용하여 해결한다.<br/>
 
   1. C
-    a. 입력
+    - 입력
       - scanf 사용
       - 정수 %d, 실수 %f, 문자열 %s 사용
       - scanf("%d", &var);
-    b. 출력
+    - 출력
       - 정수 %d, 실수 %f, 문자열 %s 사용
       - 예) printf("%d", var);
-    c. 필수 라이브러리 stdio.h
+    - 필수 라이브러리 stdio.h
   2. C++
-    a. 입력
+    - 입력
       - cin 사용
       - 예) cin >> var;
-    b. 출력
+    - 출력
       - cout 사용
       - 예) cout << var;
-    c. 필수 라이브러리 iostream
-    d. 권장사항
+    - 필수 라이브러리 iostream
+    - 권장사항
       - using namespace std;
       - ios::sync_with_stdio(false);
       - cin.tie(NULL);
   3. Java
-    a. 입력
+    - 입력
       - Scanner 사용
       - Scanner sc = new Scanner(System.in); 정수: sc.nextInt(); 실수: sc.nextDouble(); 문자열: sc.nextLine(); 또는 sc.next();
-    b. 출력
+    - 출력
       - System.out.println(var);
-    c. 필수 라이브러리 java.util.Scanner
+    - 필수 라이브러리 java.util.Scanner
 
 
 ## 입력
