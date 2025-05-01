@@ -18,36 +18,37 @@
 
   1. C
 
-    * 입력
+    a. 입력
       - scanf 사용
       - 정수 %d, 실수 %f, 문자열 %s 사용
       - scanf("%d", &var);
-    * 출력
+    b. 출력
       - 정수 %d, 실수 %f, 문자열 %s 사용
       - 예) printf("%d", var);
-    * 필수 라이브러리 stdio.h
+    c. 필수 라이브러리 stdio.h
 
   2. C++
 
-    + 입력
+    a. 입력
       - cin 사용
       - 예) cin >> var;
-    + 출력
+    b. 출력
       - cout 사용
       - 예) cout << var;
-    + 필수 라이브러리 iostream
-    + 권장사항
+    c. 필수 라이브러리 iostream
+    d. 권장사항
       - using namespace std;
       - ios::sync_with_stdio(false);
       - cin.tie(NULL);
+
   3. Java
 
-    1. 입력
+    a. 입력
       - Scanner 사용
       - Scanner sc = new Scanner(System.in); 정수: sc.nextInt(); 실수: sc.nextDouble(); 문자열: sc.nextLine(); 또는 sc.next();
-    2. 출력
+    b. 출력
       - System.out.println(var);
-    3. 필수 라이브러리 java.util.Scanner
+    c. 필수 라이브러리 java.util.Scanner
 
 
 ## 입력
