@@ -53,4 +53,4 @@
 
 
 ## 문제 링크
-https://www.acmicpc.net/problem/2190
+https://www.acmicpc.net/problem/2194
