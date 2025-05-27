@@ -67,7 +67,7 @@ n - fibo[i]를 뺀 값에서 n - fibo[i] ≥ fibo[j]인 가장 큰 j를 찾는�
 이렇게 진행했을 때 0이 되지 않는다면 존재하지 않는다로 결론 내렸다.<br/>
 
 
-(제켄도르프의 정리)[https://en.wikipedia.org/wiki/Zeckendorf%27s_theorem]로 해가 항상 존재함과 찾은 값이 최장 수열임이 보장된다.<br/>
+[제켄도르프의 정리](https://en.wikipedia.org/wiki/Zeckendorf%27s_theorem)로 해가 항상 존재함과 찾은 값이 최장 수열임이 보장된다.<br/>
 
 
 ## 문제 링크
