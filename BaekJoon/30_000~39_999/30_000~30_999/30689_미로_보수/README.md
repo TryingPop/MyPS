@@ -15,7 +15,7 @@
 ## 문제
 각 칸에 '상', '하', '좌', '우' 중 하나가 표시되어 있고 세로로 N칸, 가로로 M칸인 N x M 크기의 미로가 있다. 해당 칸으로 도착한 모든 사람은 미로에 표시된 방향으로 한 칸 이동한다. 이를 반복해 미로 밖으로 벗어나면 미로에서 탈출할 수 있다.<br/>
 
-|←|←|←||${\textsf{\color{blue}<}}$|${\textsf{\color{blue}←}}$|${\textsf{\color{blue}←}}$||←|←|←|
+|←|←|←||${\textsf{\color{blue}aaa}}$|${\textsf{\color{blue}←}}$|${\textsf{\color{blue}←}}$||←|←|←|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |↓|←|↑||↓|←|${\textsf{\color{blue}↑}}$||${\textsf{\color{magenta}↓}}$|${\textsf{\color{magenta}←}}$|↑|
 |→|↑|↑||→|↑|${\textsf{\color{blue}↑}}$||${\textsf{\color{magenta}→}}$|${\textsf{\color{magenta}↑}}$|↑|
