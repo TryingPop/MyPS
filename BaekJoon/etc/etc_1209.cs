@@ -18,8 +18,6 @@ namespace BaekJoon.etc
 
         static void Main1209(string[] args)
         {
-
-
         }
     }
 
