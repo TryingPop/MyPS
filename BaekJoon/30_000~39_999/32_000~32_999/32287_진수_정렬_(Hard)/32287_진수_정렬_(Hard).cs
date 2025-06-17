@@ -32,7 +32,7 @@ namespace BaekJoon.etc
     internal class etc_1706
     {
 
-        static void Main(string[] args)
+        static void Main1706(string[] args)
         {
 
             // 32287번
