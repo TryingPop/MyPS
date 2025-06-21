@@ -51,9 +51,10 @@ Without the second possible charm, the 4+12+7=23 is the highest value for weight
 
 dp[i] = val를 무게 i일 때 최대 가치 val를 담는다.<br/>
 각 보석에 대해 무게를 w, 가치를 d라 하자.<br/>
-무게가 큰 i부터 탐색하는데 dp[i]에 값이 있고 i + w가 m이하인 경우<br/>
-dp[i + w] = Max(dp[i + w], dp[i] + d)과 같은 점화식을 얻는다.<br/>
+보석은 많아야 1번만 사용가능하기에 무게가 큰 i부터 탐색한다.<br/>
+그리고 dp[i]에 값이 있고 i + w가 m이하인 경우 dp[i + w] = Max(dp[i + w], dp[i] + d)점화식을 얻는다.<br/>
 처음엔 dp[0]에만 값 0을 채운다.<br/>
+여기서 Max(a, b)는 a, b 중 큰 값을 반환하는 함수이다.<br/>
 
 
 이렇게 각 보석에 대해 dp의 값을 채웠다.<br/>
