@@ -19,7 +19,7 @@ namespace BaekJoon.etc
     internal class etc_1748
     {
 
-        static void Main(string[] args)
+        static void Main1748(string[] args)
         {
 
             string str;
