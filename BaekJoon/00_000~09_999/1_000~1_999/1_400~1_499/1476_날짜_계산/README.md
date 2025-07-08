@@ -49,4 +49,4 @@ E, S, M이 주어졌고, 1년이 준규가 사는 나라에서 1 1 1일때, 준�
 
 
 ## 문제 링크
-https://www.acmicpc.net/problem/1475
+https://www.acmicpc.net/problem/1476
