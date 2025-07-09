@@ -98,7 +98,7 @@ i번째에서 a가 b보다 작은 경우 i + 1번째, i + 2, ..., k번째 수와
 문자열 탐색, 숫자 배정, 진법 변환 모두 문자열 길이만큼의 연산으로 구성되므로 전체 시간 복잡도는 O(len + len) = O(len)이다.<br/>
 
 
-[12638번 All Your Base (Small) 문제](https://www.acmicpc.net/problem/12637) 역시 해당 코드로 해결 가능하다.<br/>
+[12637번 All Your Base (Small) 문제](https://www.acmicpc.net/problem/12637) 역시 해당 코드로 해결 가능하다.<br/>
 
 
 ## 문제 링크
