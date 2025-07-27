@@ -80,14 +80,5 @@ i = 0, j = 0에서 시작해 재귀적으로 dp 값을 채워나가는 Top-down 
 그래서 N = str1.Length, M = str2.Length라 하면 시간 복잡도는 O(N x M)이 된다.<br/>
 
 
-
-
-추가로 이 문제에서는 입력 인코딩 문제도 있었다.
-
-C#의 Console에서 입력받을 때 기본 인코딩은 System.Text.OSEncoding이며, 이는 Console.InputEncoding을 통해 확인할 수 있다. 이 인코딩은 기본적으로 한글을 잘 지원한다.<br/>
-하지만 StreamReader로 입력을 받으면 기본 인코딩이 UTF-8로 설정되어 있어, CP949 기반의 한글 입력이 깨지는 현상이 발생한다.<br/>
-따라서 입력 성능을 향상 시키기 위해 StreamReader를 사용할 경우, 입력 인코딩을 Console.InputEncoding 혹은 CP949로 명시적으로 설정해주면 된다.<br/>
-
-
 ## 문제 링크
 https://www.acmicpc.net/problem/15482
