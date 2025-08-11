@@ -4,6 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/*
+날짜 : 2025. 8. 11
+이름 : 배성훈
+내용 : 카드 게임
+    문제번호 : 11062번
+*/
+
 namespace BaekJoon.etc
 {
     internal class etc_1767
@@ -12,78 +19,76 @@ namespace BaekJoon.etc
         static void Main1767(string[] args)
         {
 
-            // 11062번 현재 DP 방법이 제대로 작동 X
-            // 내일 다시 알아보자!
-            int MAX = 1_000;
-            int NOT_VISIT = -1;
             using StreamReader sr = new(Console.OpenStandardInput(), bufferSize: 65536);
             using StreamWriter sw = new(Console.OpenStandardOutput(), bufferSize: 65536);
 
-            int[][][] dp = new int[MAX + 1][][];
-            int[] cards = new int[MAX + 1];
+            int NOT_VISIT = -1;
+            int[][] dp;
+            int n;
+            int[] arr;
 
-            for (int i = 0; i <= MAX; i++)
-            {
-
-                dp[i] = new int[MAX + 1][];
-                for (int j = 0; j <= MAX; j++)
-                {
-
-                    dp[i][j] = new int[2];
-                }
-            }
-
+            SetArr();
             int t = ReadInt();
 
             while (t-- > 0)
             {
 
-                int n = ReadInt();
-
                 Input();
 
+                GetRet();
+            }
 
+            void GetRet()
+            {
+
+                sw.Write(DFS(1, n));
                 sw.Write('\n');
-
-                void Input()
+                int DFS(int _s, int _e, int _add = 1)
                 {
 
-                    for (int i = 1; i <= n; i++)
-                    {
-
-                        cards[i] = ReadInt();
-                        for (int j = 1; j <= n; j++)
-                        {
-
-                            Array.Fill(dp[i][j], NOT_VISIT);
-                        }
-                    }
-                }
-
-                int DFS(int _f, int _t, int _add)
-                {
-
-                    ref int ret = ref dp[_f][_t][_add];
+                    ref int ret = ref dp[_s][_e];
+                    if (_s > _e) ret = 0;
                     if (ret != NOT_VISIT) return ret;
-                    else if (_f == _t) return ret = _add == 1 ? cards[_f] : 0;
 
-                    int f = DFS(_f + 1, _t, _add ^ 1);
-                    int t = DFS(_f, _t - 1, _add ^ 1);
-
-                    if (f < t)
+                    if (_add == 1)
                     {
 
-                        ret = _add == 1 ? cards[_f] : 0;
-                        ret += f;
+                        // 근우 턴
+                        ret = Math.Max(arr[_s] + DFS(_s + 1, _e, 0), arr[_e] + DFS(_s, _e - 1, 0));
                     }
                     else
                     {
 
-                        ret = _add == 1 ? cards[_t] : 0;
-                        ret += t;
+                        // 명우 턴
+                        ret = Math.Min(DFS(_s + 1, _e, 1), DFS(_s, _e - 1, 1));
                     }
 
                     return ret;
+                }
+            }
+
+            void SetArr()
+            {
+
+                int MAX_N = 1_000;
+                arr = new int[MAX_N + 2];
+                dp = new int[MAX_N + 2][];
+                for (int i = 0; i < dp.Length; i++)
+                {
+
+                    dp[i] = new int[MAX_N + 2];
+                }
+            }
+
+            void Input()
+            {
+
+                n = ReadInt();
+                for (int i = 1; i <= n; i++)
+                {
+
+                    arr[i] = ReadInt();
+                    Array.Fill(dp[i], NOT_VISIT, 0, n + 2);
                 }
             }
 
@@ -102,6 +107,7 @@ namespace BaekJoon.etc
                     if (c == '\r') c = sr.Read();
                     if (c == '\n' || c == ' ') return true;
                     ret = c - '0';
+
                     while ((c = sr.Read()) != -1 && c != ' ' && c != '\n')
                     {
 
