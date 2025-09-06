@@ -5,59 +5,49 @@ using System.Text;
 using System.Threading.Tasks;
 
 /*
-날짜 : 2025. 8. 17
+날짜 : 2025. 9. 5
 이름 : 배성훈
-내용 : fusnote
-    문제번호 : 3205번
+내용 : Apsnigtas takelis
+    문제번호 : 30058번
 
-    구현, 그리디 문제다.
-    해당 페이지에 본문과 각주를 넣을 수 있다면
-    함께 넣는 것이 최소임을 보장한다.
+    누적 합, 차분 배열 트릭 문제다.
+    누적 합 아이디어를 이용해 풀었다.
 */
 
 namespace BaekJoon.etc
 {
-    internal class etc_1828
+    internal class etc_1867
     {
 
-        static void Main1828(string[] args)
+        static void Main1867(string[] args)
         {
 
             using StreamReader sr = new(Console.OpenStandardInput(), bufferSize: 65536);
-
             int n = ReadInt();
-            int f = ReadInt();
 
-            int k = ReadInt();
-
-
-            int[] arr = new int[n + 1];
-            for (int i = 0; i < k; i++)
-            {
-
-                int cur = ReadInt();
-                int add = ReadInt();
-                arr[cur] += add;
-            }
-
-            int ret = 1;
-            int use = 0;
+            long[] arr = new long[n + 1];
             for (int i = 1; i <= n; i++)
             {
 
-                int chk = arr[i] + 1;
-                // 현재 페이지에 넣을 수 있는지 확인
-                if (use + chk <= f)
-                {
+                arr[i] = ReadInt();
 
-                    use += chk;
-                }
-                else
-                {
+            }
+            int[] add = new int[n + 3];
+            long ret = 0;
+            for (int i = 1; i <= n; i++)
+            {
 
-                    ret++;
-                    use = chk;
-                }
+                add[i] += add[i - 1];
+                long cur = arr[i] + add[i];
+                // 쌓인 눈이 없다.
+                if (cur == 0) continue;
+
+                // 눈이 존재!
+                ret += cur;
+                int s = i + 1;
+                long e = Math.Min(n + 2, i + cur + 1);
+                add[s]++;
+                add[e]--;
             }
 
             Console.Write(ret);
@@ -74,11 +64,12 @@ namespace BaekJoon.etc
                 {
 
                     int c = sr.Read();
+
                     if (c == '\r') c = sr.Read();
                     if (c == '\n' || c == ' ') return true;
                     ret = c - '0';
 
-                    while ((c = sr.Read()) != -1 && c != ' ' && c != '\n') 
+                    while ((c = sr.Read()) != -1 && c != ' ' && c != '\n')
                     {
 
                         if (c == '\r') continue;

@@ -5,59 +5,42 @@ using System.Text;
 using System.Threading.Tasks;
 
 /*
-날짜 : 2025. 8. 17
+날짜 : 2025. 8. 27
 이름 : 배성훈
-내용 : fusnote
-    문제번호 : 3205번
+내용 : K512에서 피자 먹기
+    문제번호 : 28072번
 
-    구현, 그리디 문제다.
-    해당 페이지에 본문과 각주를 넣을 수 있다면
-    함께 넣는 것이 최소임을 보장한다.
+    누적 합 문제다.
 */
 
 namespace BaekJoon.etc
 {
-    internal class etc_1828
+    internal class etc_1842
     {
 
-        static void Main1828(string[] args)
+        static void Main1842(string[] args)
         {
 
             using StreamReader sr = new(Console.OpenStandardInput(), bufferSize: 65536);
 
             int n = ReadInt();
-            int f = ReadInt();
-
             int k = ReadInt();
 
+            int[] cnt = new int[k];
+            int sum = 0;
 
-            int[] arr = new int[n + 1];
+            for (int i = 0; i < n; i++)
+            {
+
+                sum = (sum + ReadInt()) % k;
+                cnt[sum]++;
+            }
+
+            int ret = 0;
             for (int i = 0; i < k; i++)
             {
 
-                int cur = ReadInt();
-                int add = ReadInt();
-                arr[cur] += add;
-            }
-
-            int ret = 1;
-            int use = 0;
-            for (int i = 1; i <= n; i++)
-            {
-
-                int chk = arr[i] + 1;
-                // 현재 페이지에 넣을 수 있는지 확인
-                if (use + chk <= f)
-                {
-
-                    use += chk;
-                }
-                else
-                {
-
-                    ret++;
-                    use = chk;
-                }
+                ret = Math.Max(cnt[i], ret);
             }
 
             Console.Write(ret);
@@ -78,7 +61,7 @@ namespace BaekJoon.etc
                     if (c == '\n' || c == ' ') return true;
                     ret = c - '0';
 
-                    while ((c = sr.Read()) != -1 && c != ' ' && c != '\n') 
+                    while ((c = sr.Read()) != -1 && c != ' ' && c != '\n')
                     {
 
                         if (c == '\r') continue;
